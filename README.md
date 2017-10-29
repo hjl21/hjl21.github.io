@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 # hjl21.github.io
-	homepage
+	welcom to jl's homepage
 =======
 ## Welcome to GitHub Pages
 

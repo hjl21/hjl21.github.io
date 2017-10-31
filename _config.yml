@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 Welcome to visit my blog,If there is any wrong place, please understand；
 you can email me,junliang0706@126.com,Let us discuss it together.
 
-My motto is:All care is learned.
+My motto is: All care is learned.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com

@@ -1,10 +1,15 @@
-#linux samba
+# linux samba
 
-##samba介绍
+## samba介绍
 
-	Samba是在Linux和UNIX系统上实现SMB协议的一个免费软件，由服务器及客户端程序构成。SMB（Server Messages Block，信息服务块）是一种在局域网上共享文件和打印机的一种通信协议，它为局域网内的不同计算机之间提供文件及打印机等资源的共享服务。SMB协议是客户机/服务器型协议，客户机通过该协议可以访问服务器上的共享文件系统、打印机及其他资源。通过设置“NetBIOS over TCP/IP”使得Samba不但能与局域网络主机分享资源，还能与全世界的电脑分享资源。
+	Samba是在Linux和UNIX系统上实现SMB协议的一个免费软件，由服务器及客户端程序构成。  
+	SMB（Server Messages Block，信息服务块）是一种在局域网上共享文件和打印机的一  
+	种通信协议，它为局域网内的不同计算机之间提供文件及打印机等资源的共享服务。SMB协  
+	议是客户机/服务器型协议，客户机通过该协议可以访问服务器上的共享文件系统、打印机  
+	及其他资源。通过设置“NetBIOS over TCP/IP”使得Samba不但能与局域网络主机分享资  
+	源，还能与全世界的电脑分享资源。
 
-##samba install
+## samba install
 	yum install samba samba-client samba-common
 
 	rpm -qa | grep samba [查看安装samba相关的rpm]
@@ -13,17 +18,17 @@
 	samba-common-4.1.12-23.el7_1.x86_64
 	samba-client-4.1.12-23.el7_1.x86_64
 
-##samba的目的
+## samba的目的
 - 实现匿名访问，验证可以读写文件、目录
 - 实现指定用户的访问
 - 实现对特定的访问地址进行限制
 - 实现访问windows系统中的共享资源
 
-##备份 samba 配置
+## 备份 samba 配置
 	#过滤杂七杂八的注释备份一份
 	egrep -v "^.*#" /etc/samba/smb.conf > /etc/samba/smb_$(date +%d-%m-%y).conf
 
-##一些基本的配置
+## 一些基本的配置
 	常用的 samba 共享目录参数
 
 	[MyShare]
@@ -55,7 +60,7 @@
 	max connections = 100   #设定同时连接数
 	delete readonly = yes|no#指明能否删除共享资源里面已经被定义为只读的文件
 
-##准备一些目录和用户
+## 准备一些目录和用户
 
 	mkdir /home/development
 	mkdir /home/share
@@ -65,7 +70,7 @@
 	smbpasswd -a anycto
 	pdbedit -L
 
-##允许匿名用户访问，删除，创建，删除操作的配置和指定用户和网段的访问的目录配置
+## 允许匿名用户访问，删除，创建，删除操作的配置和指定用户和网段的访问的目录配置
 
 	[global]
 	workgroup = MYGROUP
@@ -101,14 +106,14 @@
 
 	#使用testparm测试配置是否有问题，使用testparm –v命令可以详细的列出smb.conf支持的配置参数
 
-##启动 smb 和 nmb
+## 启动 smb 和 nmb
 	组成Samba运行的有两个服务，一个是SMB，另一个是NMB；SMB是Samba 的核心启动服务，主要负责建立 Linux Samba服务器与Samba客户机之间的对话， 验证用户身份并提供对文件和打印系统的访问，只有SMB服务启动，才能实现文件的共享，监听139 TCP端口；而NMB服务是负责解析用的，类似与DNS实现的功能，NMB可以把Linux系统共享的工作组名称与其IP对应起来，如果NMB服务没有启 动，就只能通过IP来访问共享文件。
 
 	systemctl start smb.service nmb.service
 	systemctl status smb.service nmb.service
 	systemctl enable smb.service nmb.service 
 
-##查看启动 samba 进程
+## 查看启动 samba 进程
 
 	[root@c7 ~]# ps aux | grep smb
 	root  1969  0.0  0.5 371836  5376 ?Ss   15:30   0:00 /usr/sbin/smbd
@@ -140,7 +145,7 @@
 
 
 
-##在打开 selinux 的情况下，需要修改 selinux 一些参数才能会有读写的权限。
+## 在打开 selinux 的情况下，需要修改 selinux 一些参数才能会有读写的权限。
 
 	默认情况下是这样：
 

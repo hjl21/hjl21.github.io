@@ -1,18 +1,18 @@
-#CloneZilla的用法：
+# CloneZilla的用法：
 
-##简介
+## 简介
 
 Clonezilla,中文名再生龙，是一个用于系统备份和还原的工具。<br>
 类似以Ghost，但它是开源、免费的。官网地址是http://www.clonezilla.org/
 
-##安装
+## 安装
 
 1.下载一个clonezilla文件，有.iso和.zip两种格式，选择你所需要，download即可<br>
 [clonezilla文件](http://www.clonezilla.org/downloads/download.php?branch=alternative)
 http://www.clonezilla.org/downloads/download.php?branch=alternative<br>
 2.可以通过UltraISO来安装到U盘,等一会就可以了。
 
-##备份
+## 备份
 
 1.从U盘启动Clonezilla之后，首先进入的是如下界面：
 
@@ -55,9 +55,9 @@ http://www.clonezilla.org/downloads/download.php?branch=alternative<br>
 
 以上就是整个备份的过程。
 
-##还原
+## 还原
 
 还原的过程跟备份差不多。
 
-##参考文献
+## 参考文献
 [http://m.blog.csdn.net/jiangwei0512/article/details/73692007](http://m.blog.csdn.net/jiangwei0512/article/details/73692007)

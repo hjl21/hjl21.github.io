@@ -45,6 +45,7 @@ minicom -D /dev/pts/X
 	serial = 'pty'
 	on_crash = 'preserve'
 	lmce = 1
+
 2.2.3 连接串口
 
 xl console domid

@@ -1,4 +1,4 @@
-#查看linux系统版本信息
+# 查看linux系统版本信息
 
 	1.cat /proc/version
 	2.lsb_release -a [yum install redhat-lsb -y]

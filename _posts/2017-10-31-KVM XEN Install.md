@@ -1,6 +1,6 @@
-#1.KVM INstall
+# 1.KVM INstall
 
-###1.1 Compile KVM
+### 1.1 Compile KVM
 
 	git clone git://vt-sync/kvm.git
 	cd kvm   
@@ -14,9 +14,9 @@
 	3.make modules_install && make install
 	4.grub2-mkconfig -o /boot/grub2/grub.cfg[不用做，只是为了添加启动项]
 
-#2.XEN Install
+# 2.XEN Install
 
-###2.1 Compile
+### 2.1 Compile
  
 	git clone git://vt-sync.sh.intel.com/xen.git
 	cd xen
@@ -40,11 +40,11 @@
 	export http_proxy="http://proxy-shz.intel.com:911"
 	export GIT_HTTP="y"
 
-###2.2 Excute configure 
+### 2.2 Excute configure 
 
 	[root@vt xen]#./configure ###default 
 
-###2.3 Make Xen
+### 2.3 Make Xen
 
 	[root@vt xen]#make xen -j $num_cpu  # '-j $num_cpu'
 	  Make tools, install xen & tools  
@@ -60,15 +60,15 @@
 	lrwxrwxrwx. 1 root root       19 May 24 21:19 xen-4.6.gz -> xen-4.6-unstable.gz 
 	lrwxrwxrwx. 1 root root       19 May 24 21:19 xen.gz -> xen-4.6-unstable.gz 
 
-#3 Build dom0
+# 3 Build dom0
 
-###3.1 Download linux.git
+### 3.1 Download linux.git
 
 	[root@vt boot]#cd /home/build/ 
 	[root@vt build]#git clone git://vt-sync.sh.intel.com/linux-stable.git  
 	  Down latest kernel config file, and rename it to /home/build/linux/.config config-3.9.3--its a example configure file
 
-###3.2 Make Linux kernel
+### 3.2 Make Linux kernel
 
 	[root@vt build]#scp xen-build.sh.intel.com:/home/build/repo/config-example linux-stable/.config 
 	[root@vt build]#cd linux-stable 
@@ -85,7 +85,7 @@
 		lrwxrwxrwx. 1 root root       23 May 24 22:26 System.map -> /boot/System.map-4.1.1 
 		-rw-r--r--. 1 root root  4863943 May 24 22:26 initramfs-4.1.1.img 
 	最后修改grub.cfg文件，reboot
-##4.after xen and dom0,system configuration info
+## 4.after xen and dom0,system configuration info
 
 ### 4.1 启动xen
 	[root@vt /]#echo "/usr/local/lib" >>/etc/ld.so.conf
@@ -93,14 +93,14 @@
 	[root@vt /]# /etc/init.d/xencommons start
 	#we also can put 3 command to /etc/rc.d/rc.local, then give rc.local execute(chmod +x /etc/rc.d/rc.local)
 
-###4.2 create vm
+### 4.2 create vm
 
 	1.xl list
 	2.xl info 
 	3.xl create + 配置信息
 	4.xl vnc + domainID
 
-###4.3 一些问题解决办法
+### 4.3 一些问题解决办法
 
 	1.查看网桥信息：brctl show，如果有两个，把/etc/libvirt/qemu/networks 下的default.xml换个名字 或者把virbr0删掉
 	2.查看host的cpu信息：xenpm get-cpu-topolo
@@ -112,7 +112,7 @@
 		/etc/init.d/xencommons start
 	5.判断KVM or XEN 环境的依据：/usr/libexec/里面qemu-kvm
 
-#5.安装过程中出现的error及解决办法：
+# 5.安装过程中出现的error及解决办法：
 - 5.1 yum install xz-devel for <font color=red size=5>lzma</font> 缺少	
 - 5.2 yum install uuid-devel.x86_64 for <font color=red size=5>uuid</font> 缺少
 - 5.3 yum install ncurses-devel.x86_64 for <font color=red size=5>ncurses</font> 缺少

@@ -113,7 +113,9 @@
 	5.判断KVM or XEN 环境的依据：/usr/libexec/里面qemu-kvm
 
 # 5.安装过程中出现的error及解决办法：
-- 5.1 yum install xz-devel for <font color=red size=5>lzma</font> 缺少	
+
+5.1 yum install xz-devel for <font color=red size=5>lzma</font> 缺少	
+
 - 5.2 yum install uuid-devel.x86_64 for <font color=red size=5>uuid</font> 缺少
 - 5.3 yum install ncurses-devel.x86_64 for <font color=red size=5>ncurses</font> 缺少
 - 5.4 yum install glib2-devel.x86_64  for <font color=red size=5>glib 2.0</font>     缺少

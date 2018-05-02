@@ -1,6 +1,6 @@
-#SSH中"HOST KEY VERIFICATION FAILED."的解决方案
+# SSH中"HOST KEY VERIFICATION FAILED."的解决方案
 
-我们使用ssh链接linux主机时，可能出现“Host key verification failed.“的提示，ssh连接不成功。
+我们使用ssh链接linux主机时，可能出现"Host key verification failed."的提示，ssh连接不成功。
 可能的提示信息如下:
 
 

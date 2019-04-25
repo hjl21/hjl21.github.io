@@ -31,11 +31,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-
-layout: MyTemplate
-title: Category Sample
-category: test
-
+  
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

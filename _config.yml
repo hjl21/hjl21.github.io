@@ -32,18 +32,13 @@ theme: minima
 plugins:
   - jekyll-feed
   
-permalink: /:year/:month/:day/:title.html
-paginate: 1
-paginate_path: "article/:num"
+permalink: /:categories/:year/:month/:day/:title:output_ext
 
 # Collections
-collections:
- common:
-  output: true
-  permalink: /:collection/:title
- ui:
-  output: true
-  permalink: /:collection/:title
+ollections:
+  my_collection:
+    output: true
+    permalink: /:collection/:name
   
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

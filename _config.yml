@@ -32,6 +32,10 @@ theme: minima
 plugins:
   - jekyll-feed
   
+permalink: /:year/:month/:day/:title.html
+paginate: 1
+paginate_path: "article/:num"
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

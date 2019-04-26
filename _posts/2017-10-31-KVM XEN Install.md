@@ -1,10 +1,10 @@
 ---
 layout: post
-title: KVM Install
-category: perl
+title: KVM&Xen Install
+category: Perl
 ---
 
-# 1.KVM INstall
+# 1.KVM Install
 
 ### 1.1 Compile KVM
 

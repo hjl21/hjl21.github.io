@@ -8,12 +8,12 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
+# Site settings  站点设置
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: love everything - 黄俊亮
+title: C.captain | 技术博客
 email: junliang0706@126.com
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to visit my blog, If there is any wrong place, please understand.
@@ -21,10 +21,14 @@ description: >- # this means to ignore newlines until "baseurl:"
 
   My motto is: All care is learned.
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: none
+baseurl: "/hjl21.github.io/" # the subpath of your site, e.g. /blog
+url: "https://hjl21.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username: none
 github_username:  hjl21
+
+# User Settings 博主信息 
+username: C.captain
+user_description: '热爱技术&设计，一切皆技术' #对博主的一些描述 
 
 # Build settings
 markdown: kramdown
@@ -39,6 +43,15 @@ ollections:
   my_collection:
     output: true
     permalink: /:collection/:name
+
+# Links 来加载 menu 导航 
+links: 
+ - title: 博客主页 
+   url: / 
+ - title: 关于博主 
+   url: /about/ 
+ - title: 联系博主 
+   url: /contact/ 
   
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

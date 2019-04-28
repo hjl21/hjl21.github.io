@@ -4,8 +4,8 @@ html{
 	-webkit-text-size-adjust:100%
 }
 body{	margin:0
-	color:#000000
-	background: #FFFFFF }
+	font-color:#000000
+	background-color: #FFFFFF }
 article,aside,footer,header,nav,section{	display:block	}
 h1{
 	font-size:2em;

@@ -31,9 +31,11 @@
                 <h1 class="post-title" itemprop="name">{{ page.title }}</h1>
                 <p itemprop="description" class="subtitle">{{ page.description }}</p>
 				<!-- 如果有图片，加载图片 -->
+		<!--
                 {% if page.image %}
                     <img src="{{ page.image }}" alt="Imagem" class="post-cover">
                 {% endif %}
+                -->
 				<!-- 加载文章内容 -->
                 {{ content }}
             </article>
@@ -53,9 +55,9 @@
 			<!-- 加载博主信息 -->
             {% include author.html %}
 			<!-- 加载评论功能，因为还得注册什么东西，先注释掉 -->
-			<!--
+			
             {% include comments.html %}
-			-->
+			
 			<!-- 加载底部信息 -->
             {% include footer.html %}
         </section>

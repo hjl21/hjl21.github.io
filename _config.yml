@@ -29,6 +29,7 @@ github_username:  hjl21
 # User Settings 博主信息 
 username: C.captain
 user_description: '热爱技术&设计，一切皆技术' #对博主的一些描述 
+disqus_username: disqus_username
 
 # Build settings
 markdown: kramdown
@@ -36,10 +37,10 @@ theme: minima
 plugins:
   - jekyll-feed
 #  - jemoji
-permalink: /:year/:month/:day/:title:output_ext
+permalink: /:title/
 
 # Collections
-ollections:
+collections:
   my_collection:
     output: true
     permalink: /:collection/:name

@@ -39,12 +39,6 @@ plugins:
 #  - jemoji
 permalink: /:title/
 
-# Collections
-collections:
-  my_collection:
-    output: true
-    permalink: /:collection/:name
-
 # Links 来加载 menu 导航 
 links: 
  - title: 博客主页 

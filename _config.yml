@@ -4,9 +4,6 @@
 # which you are expected to set up once and rarely edit after that. If you find
 # yourself editing this file very often, consider using Jekyll's data files
 # feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings  站点设置
 # These are used to personalize your new site. If you look in the HTML files,
@@ -59,3 +56,4 @@ links:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+exclude: ['package.json', 'src', 'node_modules']

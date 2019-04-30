@@ -14,7 +14,7 @@ motto: It's our wits that make us men.
 banner: 学而不思则罔，思而不学则殆。
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://hjl21.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://www.hifreud.com" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: none
 github: 
 github_username:  hjl21

@@ -6,9 +6,8 @@ categories: 技术文档
 tag: Virtualiztion
 ---
 
-
-
-[TOC]
+* content
+{:toc}
 
 # 删除网桥
 

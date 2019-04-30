@@ -13,8 +13,8 @@ meta_description: 黄俊亮;个人博客;学而不思则罔;思而不学则殆;�
 motto: It's our wits that make us men.
 banner: 学而不思则罔，思而不学则殆。
 
-baseurl: "https://hjl21.github.io/" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://hjl21.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: none
 github: 
 github_username:  hjl21

@@ -1,11 +1,9 @@
 ---
-​---
 layout: post
 title: "删掉网桥"
 date: 2017-10-31 13:19:37 +0800
 categories: 技术文档
 tag: Virtualiztion
-​---
 ---
 
 

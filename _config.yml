@@ -1,26 +1,22 @@
 # Welcome to Jekyll!
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-
 # Site settings  站点设置
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: C.captain | 技术博客
+name: C.captain | 技术博客
 email: junliang0706@126.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to visit my blog, If there is any wrong place, please understand.
-  you can email me,@junliang0706@126.com, Let us discuss them together.
+author: Junliang Huang
+description: All care is learned.处处留心皆学问。
+meta_description: 黄俊亮;个人博客;学而不思则罔;思而不学则殆;生命不止;折腾不休
+motto: It's our wits that make us men.
+banner: 学而不思则罔，思而不学则殆。
 
-  My motto is: All care is learned.
-
-baseurl: "/hjl21.github.io/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://hjl21.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: none
+github: 
 github_username:  hjl21
 
 # User Settings 博主信息 
@@ -34,35 +30,9 @@ theme: minima
 plugins:
   - jekyll-feed
 #  - jemoji
-permalink: /:title/
+permalink: /:year/:month/:day/:title/
+paginate: 10
 
-# Links 来加载 menu 导航 
-links: 
- - title: 博客主页 
-   url: / 
- - title: 关于博主 
-   url: /about/ 
- - title: 联系博主 
-   url: /contact/ 
+baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
 
-# Collections
-collections:
- common:
-  output: true
-  permalink: /:collection/:title
- ui:
-  output: true
-  permalink: /:collection/:title  
-  
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-exclude: ['package.json', 'src', 'node_modules']
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']

@@ -6,6 +6,9 @@ categories: jekyll
 tag: jekyll
 ---
 
+\* content
+
+{:toc}
 
 First POST build by Jekyll.
 
@@ -13,7 +16,7 @@ First POST build by Jekyll.
 
 
 
-![qinyuanchun_xue](C:\Users\huangj43\Desktop\qinyuanchun_xue.jpg)
+![沁园春·雪]({{ '/styles/images/qinyuanchun_xue.jpg' }})
 
 
 

@@ -6,7 +6,7 @@ categories: jekyll
 tag: jekyll
 ---
 
-\* content
+* content
 
 {:toc}
 

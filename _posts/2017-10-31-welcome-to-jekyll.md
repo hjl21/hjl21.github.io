@@ -6,8 +6,7 @@ categories: jekyll
 tag: jekyll
 ---
 
-\* content
-
+* content
 {:toc}
 
 First POST build by Jekyll.

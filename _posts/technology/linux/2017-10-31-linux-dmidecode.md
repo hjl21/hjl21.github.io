@@ -6,8 +6,8 @@ categories: 技术文档
 tag: linux
 ---
 
-[TOC]
-
+* content
+{:toc}
 
 
 # **dmidecode**

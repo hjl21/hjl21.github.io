@@ -7,7 +7,6 @@ tag: Liunx
 ---
 
 * content
-
 {:toc}
 
 # linux samba

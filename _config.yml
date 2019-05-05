@@ -14,15 +14,12 @@ motto: It's our wits that make us men.
 banner: 世事洞明皆学问，人情练达即文章。
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://hjl21.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.hjl.com/"
+#url: "https://hjl21.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: none
-github: https://github.com/hjl21/hjl21.github.io
+github: https://github.com/
 github_username:  hjl21
 
-# User Settings 博主信息 
-username: C.captain
-user_description: '热爱技术&设计，一切皆技术' #对博主的一些描述 
-disqus_username: disqus_username
 
 # Build settings
 markdown: kramdown

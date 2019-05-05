@@ -6,8 +6,7 @@ categories: 技术文档
 tag: tool
 ---
 
-\* content
-
+* content
 {:toc}
 
 # markdown的用法

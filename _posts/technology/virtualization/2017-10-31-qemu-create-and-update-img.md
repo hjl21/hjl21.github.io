@@ -6,8 +6,7 @@ categories: 技术文档
 tag: Virtualization
 ---
 
-\* content
-
+* content
 {:toc}
 
 # 1.qemu update

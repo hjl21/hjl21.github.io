@@ -7,7 +7,6 @@ tag: Linux
 ---
 
 * content
-
 {:toc}
 
 # rhel7.X 忘记密码

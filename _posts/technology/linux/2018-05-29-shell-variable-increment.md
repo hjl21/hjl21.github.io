@@ -6,10 +6,7 @@ categories: 技术文档
 tag: Linux
 ---
 
-
-
 * content
-
 {:toc}
 
 ## shell中变量自增的实现方法：

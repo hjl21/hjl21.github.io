@@ -6,8 +6,7 @@ categories: 技术文档
 tag: Linux
 ---
 
-\* content
-
+* content
 {:toc}
 
 # linux java环境变量设置

@@ -7,7 +7,6 @@ tag: tool
 ---
 
 * content
-
 {:toc}
 
 # serial log

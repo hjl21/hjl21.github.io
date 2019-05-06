@@ -7,8 +7,7 @@ tag: Linux
 ---
 
 * content
-
-  {:toc}
+{:toc}
 
 ### fatal error:xxx.h no such file or directory 解决方案 ###
 

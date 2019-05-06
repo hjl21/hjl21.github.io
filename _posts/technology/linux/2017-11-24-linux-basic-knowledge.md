@@ -7,7 +7,6 @@ tag: Linux
 ---
 
 * content
-
 {:toc}
 
 # 1.linux基础知识

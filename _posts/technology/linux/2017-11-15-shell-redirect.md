@@ -7,7 +7,6 @@ tag: Linux
 ---
 
 * content
-
 {:toc}
 
 # 重定向

@@ -7,7 +7,6 @@ tag: Python
 ---
 
 * content
-
 {:toc}
 
 # python sort sorted key cmp详解

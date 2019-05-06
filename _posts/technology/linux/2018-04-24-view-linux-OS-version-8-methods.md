@@ -6,11 +6,7 @@ categories: 技术文档
 tag: Linux
 ---
 
-
-
 * content
-
-
 {:toc}
 
 # 查看linux发行版名称和版本号的8种方法

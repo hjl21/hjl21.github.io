@@ -7,7 +7,6 @@ tag: Virtualization
 ---
 
 * content
-
 {:toc}
 
 ## 1.制作guest image的方法

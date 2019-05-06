@@ -7,8 +7,7 @@ tag: Python
 ---
 
 * content
-
-  {:toc}
+{:toc}
 
 ### python常用内置函数
 

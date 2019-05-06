@@ -3,7 +3,7 @@ layout: post
 title: dmidecode用法
 date: 2017-10-31 13:26:23 +8000
 categories: 技术文档
-tag: linux
+tag: Linux
 ---
 
 * content

@@ -7,8 +7,7 @@ tag: Linux
 ---
 
 * content
-
-  {:toc}
+{:toc}
 
 ### Linux小命令收集
 

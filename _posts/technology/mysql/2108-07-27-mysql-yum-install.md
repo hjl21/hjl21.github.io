@@ -7,10 +7,7 @@ tag: mysql
 ---
 
 * content
-
-  {:toc}
-
-
+{:toc}
 
 ## 如何安装mysql在linux OS上
 1.下载rpm包：

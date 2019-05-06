@@ -3,7 +3,7 @@ layout: post
 title: linux samba
 date: 2017-10-31 13:53:23 +0800
 categories: 技术文档
-tag: Liunx
+tag: Linux
 ---
 
 * content

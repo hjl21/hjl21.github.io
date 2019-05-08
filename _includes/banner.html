@@ -4,7 +4,13 @@
   	{% if page.categories != null %}
     	<a href="{{ '/categories/' | prepend: site.baseurl }}#{{page.categories}}-ref">{{page.categories}}</a>	/
     	<a href="{{ '/tag/' | prepend: site.baseurl }}#{{page.tag}}-ref">{{page.tag}}</a>
-	<span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span>
+	<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+	 <ul class="nav navbar-nav navbar-right">
+	  <li>	
+	   <a><span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></a>
+	  </li>
+	 </ul>
+	</nav>
     {% else %}
     	{{ site.banner }}
     {% endif %}

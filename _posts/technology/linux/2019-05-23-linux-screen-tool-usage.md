@@ -16,7 +16,9 @@ tag: Linux
 
 ### 2.简介 ###
 
-**GNU Screen**是一款由GNU计划开发的用于命令行终端切换的自由软件。用户可以通过该软件同时连接多个本地或远程的命令行会话，并在其间自由切换。
+1.**GNU Screen**是一款由GNU计划开发的用于命令行终端切换的自由软件。用户可以通过该软件同时连接多个本地或远程的命令行会话，并在其间自由切换。
+
+2.**GNU Screen**可以看作是窗口管理器的命令行界面版本。它提供了统一的管理多个会话的界面和相应的功能。
 
 ### 3.安装screen ###
 
@@ -40,36 +42,42 @@ yum install screen -y
 -ls或--list 　显示目前所有的screen作业。
 -wipe 　检查目前所有的screen作业，并删除已经无法使用的screen作业。
 
-screen -S yourname ->    新建一个叫yourname的session
-screen -ls ->            列出当前所有的session
+1.screen -S test :       创建一个名称为test的会话
+2.screen -ls :           列出当前所有的session
 sles12-huangj43-dev-00:/home/test/log # screen -ls
 There is a screen on:
         10964.top       (Detached)
 1 Socket in /var/run/screens/S-root.
 
 sles12-huangj43-dev-00:/home/test/log #
-screen -r yourname ->    重新连接yourname这个session
+3.screen -r test :     通过session ID恢复test会话
 sles12-huangj43-dev-00:/home/test/log # screen -r top
 
-screen -d yourname ->    远程detach某个session
-screen -d -r yourname -> 结束当前session并回到yourname这个session
+4.screen -d test :    分离test会话，但会话中的任务会继续执行
+screen -d -r test :   结束当前session并回到test这个session
 ~~~
 
 ### 5.screen session 操作 ###
 
 **在每个screen session 下，所有命令都以 ctrl+a(C-a) 开始。**
 
-1. C-a d -> detach，暂时离开当前session，将目前的 screen session (可能含有多个 windows) 丢到后台执行，并会回到还没进 screen 时的状态，此时在 screen session 里，每个 window 内运行的 process (无论是前台/后台)都在继续执行，即使 logout 也不影响。
+1. C-a ? -> Help，显示简单说明
 
-2. C-a k -> kill window，强行关闭当前的 window
+2. C-a c -> 创建新的终端,并切换到该终端
 
-3. C-a c -> 创建一个新的运行shell的窗口并切换到该窗口
+3. C-a d -> detach，暂时离开当前session，将目前的 screen session (可能含有多个 windows) 丢到后台执行，并会回到还没进 screen 时的状态，此时在 screen session 里，每个 window 内运行的 process (无论是前台/后台)都在继续执行，即使 logout 也不影响。
 
-4. C-a n -> Next，切换到下一个 window 
+4. C-a k -> kill window，强行关闭当前的 window
 
-5. C-a p -> Previous，切换到前一个 window 
+5. C-a c -> 创建一个新的运行shell的窗口并切换到该窗口
 
-6. C-a [ -> 进入 copy mode，在 copy mode 下可以回滚、搜索、复制就像用使用 vi 一样
+6. C-a n -> Next，切换到下一个 window 
+
+7. C-a p -> Previous，切换到前一个 window 
+
+8. C-a A -> 重命名终端
+
+9. C-a [ -> 进入 copy mode，在 copy mode 下可以回滚、搜索、复制就像用使用 vi 一样
 
    ​    C-b Backward，PageUp 
 
@@ -92,6 +100,10 @@ screen -d -r yourname -> 结束当前session并回到yourname这个session
    ​    Esc 结束 copy mode 
 
    C-a ] -> Paste，把刚刚在 copy mode 选定的内容贴上
+
+10. C-a x -> 锁住当前窗口，需用用户密码解锁
+
+11. C-a X -> 关闭当前终端
 
 ### 6.清除dead会话或者杀掉某个会话 ###
 
@@ -125,11 +137,17 @@ There is a screen on:
 sles12-huangj43-dev-00:/home/test/log # screen -r 10964
 ~~~
 
-### 7.分屏 ###
+### 7.分屏多窗口显示 ###
 
-将一个屏幕分割成不同区域显示不同的Screen窗口显然是个很酷的事情。可以使用快捷键C-a S将显示器水平分割，Screen 4.00.03版本以后，也支持垂直分屏，快捷键是C-a |。分屏以后，可以使用C-a \<tab\>在各个区块间切换，每一区块上都可以创建窗口并在其中运行进程。
+打开多个窗口后，可以使用快捷键C-a w列出当前所有窗口。如果使用文本终端，这个列表会列在屏幕左下角，如果使用X环境下的终端模拟器，这个列表会列在标题栏里。窗口列表的样子一般是这样：
 
-可以用C-a X快捷键关闭当前焦点所在的屏幕区块，也可以用C-a Q关闭除当前区块之外其他的所有区块。关闭的区块中的窗口并不会关闭，还可以通过窗口切换找到它。
+> 0$ bash  1-$ bash  2*$ bash
+
+这个例子中我开启了三个窗口，其中*号表示当前位于窗口2，-号表示上一次切换窗口时位于窗口1。
+
+Screen默认会为窗口命名为编号和窗口中运行程序名的组合，上面的例子中窗口都是默认名字。练习了上面查看窗口的方法，你可能就希望各个窗口可 以有不同的名字以方便区分。可以使用快捷键C-a A来为当前窗口重命名，按下快捷键后，Screen会允许你为当前窗口输入新的名字，回车确认。
+
+可以使用快捷键C-a S将显示器水平分割，Screen 4.00.03版本以后，也支持垂直分屏，快捷键是C-a |。分屏以后，可以使用C-a \<tab\>在各个区块间切换，每一区块上都可以创建窗口并在其中运行进程。
 
 例如：
 
@@ -153,10 +171,57 @@ sles12-huangj43-dev-00:/home/test/log # screen -r 10964
 >
 >Ctrl a p       上个窗口
 >
-> Ctrl a “       显示窗口列表
+> Ctrl a “  或者Ctrl a w     显示窗口列表
 
 ### 8.C/P模式和操作 ###
 
 screen的另一个很强大的功能就是可以在不同窗口之间进行复制粘贴。使用快捷键C-a \<Esc\>或者C-a [可以进入copy/paste模式，这个模式下可以像在vi中一样移动光标，并可以使用空格键设置标记。其实在这个模式下有很多类似vi的操作，譬如使用/进行搜索，使用y快速标记一行，使用w快速标记一个单词等。
 
 一般情况下，可以移动光标到指定位置，按下空格设置一个开头标记，然后移动光标到结尾位置，按下空格设置第二个标记，同时会将两个标记之间的部分储存在copy/paste buffer中，并退出copy/paste模式。在正常模式下，可以使用快捷键C-a ]将储存在buffer中的内容粘贴到当前窗口。
+
+### 9.常见问题 ###
+
+1. screen显示attached，无法连接怎么办？
+
+   ~~~shell
+   sles12-huangj43-dev-00:/home/test/log # screen -ls
+   There is a screen on:
+           30730.FMEA      (Attached)
+   1 Socket in /var/run/screens/S-root.
+   ~~~
+
+   **解决方案:**使用命令 **screen -D -r 30730** ，解释：-D -r 先踢掉前一用户，再登陆。
+
+2. 运行screen -D -r ,出现Attaching from inside of screen?
+
+   ~~~shell
+   sles12-huangj43-dev-00:/home/test/log # screen -D -r FMEA
+   Attaching from inside of screen?
+   sles12-huangj43-dev-00:/home/test/log # screen -r 30730
+   There is a screen on:
+           30730.FMEA      (Attached)
+   There is no screen to be resumed matching 30730.
+   sles12-huangj43-dev-00:/home/test/log # screen -D -r 30730.FMEA
+   Attaching from inside of screen?
+   ~~~
+
+   **解决方案:**  出现这种情况，一般是使用多窗口的情况。此时已经在screen的窗口中，只是看起来和不在screen窗口一样，运行Ctrl a n可以切换下一个窗口。
+
+   查看screen进程，可以看到该session已经有终端在连接。因此需要分离或者kill掉窗口，回到shell.
+
+   ~~~shell
+   sles12-huangj43-dev-00:/home/test/log # ps -elf |grep screen | grep -v grep
+   4 S root     26134  2608  0  80   0 -  5042 pause  21:36 pts/1    00:00:00 screen -r FMEA
+   sles12-huangj43-dev-00:/home/test/log # screen -D FMEA
+   [30730.FMEA power detached.]
+   
+   ~~~
+### 10.使用总结 ###
+
+1. (**Detached**)---->挂起状态，无终端在连接会话。
+2. (**Attached**)---->有终端在连接会话。
+3.  在会话中输入exit：永久退出本会话，也即是删除本会话，显示信息“screen is terminating”。
+4.  多个session之间切换：先分离会话回到shell，再通过screen -ls查看会话列表，然后使用screen -r恢复到目标会话。
+5.  停止screen session：会话中输入exit正常退出，或者 kill -9 PID (session ID同时也是PID)。
+6.  对于处于Attached模式的会话，不能直接screen -r，需要先screen -D，然后才能screen -r。
+

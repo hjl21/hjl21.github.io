@@ -5,7 +5,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-name: C.captain | 技术博客
+name: Henry | 技术博客
 email: junliang0706@126.com
 author: Junliang Huang
 description: All care is learned.处处留心皆学问。
